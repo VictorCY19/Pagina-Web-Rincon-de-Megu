@@ -40,26 +40,31 @@ Este repositorio contiene los fragmentos de código más relevantes que demuestr
 
 ## 🖼️ Vista Previa del Proyecto
 
-<table style="width: 100%;">
-  <tr>
-    <td width="50%">
-      <p align="center"><b>Interfaz de Usuario (Desktop)</b></p>
-      <img src="screenshots/Vista_Ordenador.png" alt="Home Desktop" width="100%">
-    </td>
-    <td width="50%">
-      <p align="center"><b>Interfaz de Usuario (Mobile)</b></p>
-      <img src="screenshots/Vista_Mobile.png" alt="Mensaje WhatsApp" width="100%">
-    </td>
-      <td width="50%">
-      <p align="center"><b>Vista de Carrito de Compras</b></p>
-      <img src="screenshots/Cart_Summary.png" alt="Mensaje WhatsApp" width="100%">
-    </td>
-      <td width="50%">
-      <p align="center"><b>Compra por Whatsapp (mensaje)</b></p>
-      <img src="screenshots/Mensaje_wtsp.png" alt="Mensaje WhatsApp" width="100%">
-    </td>
-  </tr>
-</table>
+## 🖼️ Vista Previa del Proyecto
+
+A continuación se muestra el flujo de usuario y la interfaz responsiva implementada en **El Rincón de Megu**:
+
+### 🖥️ Vista de Ordenador (Desktop)
+En esta vista se puede apreciar el fondo personalizado y la disposición de los productos destacados con el branding de la tienda.
+![Vista Ordenador](screenshots/Vista_Ordenador.png)
+
+---
+
+### 📱 Vista Dispositivos Móviles (Mobile)
+Optimización del layout para una navegación fluida en celulares, priorizando la visualización de los detalles en las cartas y figuras.
+![Vista Mobile](screenshots/Vista_Mobile.png)
+
+---
+
+### 🛒 Gestión de Carrito de Compras
+Interfaz del carrito donde se acumulan los ítems antes de proceder al cierre de venta por WhatsApp.
+![Vista Carrito](screenshots/Cart_Summary.png)
+
+---
+
+### 💬 Finalización de Compra (Mensaje WhatsApp)
+Resultado final de la lógica Liquid: un mensaje estructurado con la lista de productos, cantidades y el monto total enviado directamente al vendedor.
+![Mensaje WhatsApp](screenshots/Mensaje_wtsp.png)
 
 > *Nota: Se priorizó un diseño responsivo para facilitar la compra rápida de productos TCG desde dispositivos móviles.*
 
