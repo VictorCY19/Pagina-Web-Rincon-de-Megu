@@ -40,30 +40,32 @@ Este repositorio contiene los fragmentos de código más relevantes que demuestr
 
 ## 🖼️ Vista Previa del Proyecto
 
-## 🖼️ Vista Previa del Proyecto
-
 A continuación se muestra el flujo de usuario y la interfaz responsiva implementada en **El Rincón de Megu**:
 
 ### 🖥️ Vista de Ordenador (Desktop)
 En esta vista se puede apreciar el fondo personalizado y la disposición de los productos destacados con el branding de la tienda.
+<br>
 ![Vista Ordenador](screenshots/Vista_Ordenador.png)
 
 ---
 
 ### 📱 Vista Dispositivos Móviles (Mobile)
 Optimización del layout para una navegación fluida en celulares, priorizando la visualización de los detalles en las cartas y figuras.
+<br>
 ![Vista Mobile](screenshots/Vista_Mobile.png)
 
 ---
 
 ### 🛒 Gestión de Carrito de Compras
 Interfaz del carrito donde se acumulan los ítems antes de proceder al cierre de venta por WhatsApp.
+<br>
 ![Vista Carrito](screenshots/Cart_Summary.png)
 
 ---
 
 ### 💬 Finalización de Compra (Mensaje WhatsApp)
 Resultado final de la lógica Liquid: un mensaje estructurado con la lista de productos, cantidades y el monto total enviado directamente al vendedor.
+<br>
 ![Mensaje WhatsApp](screenshots/Mensaje_wtsp.png)
 
 > *Nota: Se priorizó un diseño responsivo para facilitar la compra rápida de productos TCG desde dispositivos móviles.*
