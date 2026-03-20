@@ -1,0 +1,36 @@
+{% comment %}
+  SNIPPET: CHECKOUT PERSONALIZADO POR WHATSAPP (CARRITO COMPLETO)
+  Genera una lista detallada de todos los ítems agregados para cerrar la venta manualmente.
+{% endcomment %}
+
+<div class="cart__ctas">
+  {% comment %}
+    1. CAPTURA DE DATOS:
+    Creamos una variable 'cart_details' que almacena el texto formateado.
+    El bucle 'for' recorre cada ítem del objeto global 'cart.items'.
+  {% endcomment %}
+  {% capture cart_details %}
+Hola! Quiero realizar el pedido de mi carrito en El Rincón de Megu:
+{% for item in cart.items %}
+- {{ item.product.title }} (Cantidad: {{ item.quantity }})
+{% endfor %}
+
+*Total a pagar: {{ cart.total_price | money }}*
+  {% endcapture %}
+
+  {% comment %}
+    2. ESCAPE DE PARÁMETROS URL:
+    El filtro 'url_param_escape' es fundamental aquí. 
+    Convierte espacios y saltos de línea del 'capture' previo en código seguro para URLs,
+    asegurando que el mensaje llegue a WhatsApp con el formato de lista intacto.
+  {% endcomment %}
+  <a 
+    href="https://wa.me/51984123788?text={{ cart_details | url_param_escape }}" 
+    class="cart__checkout-button button"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="text-decoration: none; text-align: center; display: block;"
+  >
+    Pagar por WhatsApp
+  </a>
+</div>

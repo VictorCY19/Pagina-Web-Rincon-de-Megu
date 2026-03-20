@@ -1,12 +1,17 @@
 # El Rincón de Megu - E-commerce de Coleccionables (Japón & TCG)
 
+![Shopify](https://img.shields.io/badge/Shopify-7AB55C?style=for-the-badge&logo=shopify&logoColor=white)
+![Liquid](https://img.shields.io/badge/Liquid-000000?style=for-the-badge&logo=shopify&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
 **El Rincón de Megu** es la primera plataforma peruana especializada en la importación y venta de productos exclusivos de Japón, centrada en Trading Card Games (TCG) y figuras de colección. Este proyecto nace con el objetivo de construir una comunidad "geek" que no solo adquiera productos, sino que viva una experiencia de coleccionismo completa.
 
-## 🚀 Desafíos Técnicos y Soluciones
+## Desafíos Técnicos y Soluciones
 
 ### 1. Flujo de Venta Personalizado (WhatsApp Commerce)
 Debido a la naturaleza del mercado local, se implementó un sistema de **venta asistida por WhatsApp**. El reto consistió en bypassear el checkout tradicional de Shopify manteniendo la funcionalidad del carrito:
-* **Lógica en JavaScript:** Desarrollé un script que captura los objetos del carrito de Shopify, calcula el monto total y genera un mensaje estructurado para WhatsApp.
+* **Lógica en Liquid:** Desarrollé snippets que capturan los objetos globales (`product` y `cart`) y utilizan el filtro `url_param_escape` para generar un mensaje estructurado y legible que se envía directamente al vendedor para cerrar la venta manualmente.
 * **Gestión de Inventario Real-Time:** Se configuró una lógica donde, al confirmar el envío del pedido al chat, el sistema descuenta automáticamente el stock mediante la API de Shopify, asegurando la integridad de los datos.
 
 ### 2. Frontend & Responsividad Extrema
@@ -19,11 +24,44 @@ El diseño visual es crítico para el público coleccionista. Se trabajó con **
 ### 3. SEO y Visibilidad
 Se implementaron configuraciones avanzadas en **Google Search Console** para indexar productos específicos, permitiendo que coleccionistas encuentren piezas exclusivas mediante búsquedas orgánicas en Perú.
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 * **Core:** Shopify Engine.
 * **Lenguajes:** Liquid (Templating), CSS3 (Custom Styling), JavaScript (Lógica de carrito y API).
-* **Herramientas de Desarrollo:** Shopify CLI, Visual Studio Code, Git, Warp.
+* **Herramientas de Desarrollo:** Shopify CLI, Visual Studio Code, Git.
 * **Gestión:** Inventario nativo de Shopify sincronizado con pedidos manuales.
+
+## Estructura del Repositorio
+
+Este repositorio contiene los fragmentos de código más relevantes que demuestran la lógica personalizada aplicada al proyecto:
+
+* **`/assets`**: Contiene el CSS personalizado enfocado en la responsividad móvil y la identidad visual de la tienda (branding).
+* **`/snippets`**: Incluye los fragmentos de código Liquid para la integración de WhatsApp y la lógica de captura de datos del carrito.
+* **`/screenshots`**: Muestra de la interfaz de usuario y el flujo de mensajes hacia WhatsApp.
+
+## 🖼️ Vista Previa del Proyecto
+
+<table style="width: 100%;">
+  <tr>
+    <td width="50%">
+      <p align="center"><b>Interfaz de Usuario (Desktop)</b></p>
+      <img src="screenshots/Vista_Ordenador.png" alt="Home Desktop" width="100%">
+    </td>
+    <td width="50%">
+      <p align="center"><b>Interfaz de Usuario (Mobile)</b></p>
+      <img src="screenshots/Vista_Mobile.png" alt="Mensaje WhatsApp" width="100%">
+    </td>
+      <td width="50%">
+      <p align="center"><b>Vista de Carrito de Compras</b></p>
+      <img src="screenshots/Cart_Summary.png" alt="Mensaje WhatsApp" width="100%">
+    </td>
+      <td width="50%">
+      <p align="center"><b>Compra por Whatsapp (mensaje)</b></p>
+      <img src="screenshots/Mensaje_wtsp.png" alt="Mensaje WhatsApp" width="100%">
+    </td>
+  </tr>
+</table>
+
+> *Nota: Se priorizó un diseño responsivo para facilitar la compra rápida de productos TCG desde dispositivos móviles.*
 
 ## 📈 Roadmap de Innovación
 El proyecto está diseñado para escalar hacia un ecosistema digital más robusto:

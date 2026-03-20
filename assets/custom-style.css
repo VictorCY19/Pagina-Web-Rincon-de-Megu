@@ -1,0 +1,39 @@
+/**
+ * PERSONALIZACIÓN DE IDENTIDAD VISUAL - EL RINCÓN DE MEGU
+ * Objetivo: Romper el diseño plano de Shopify para crear una estética "Geek/Coleccionista".
+ */
+
+/* 1. FORZADO DE FONDO GLOBAL:
+  Se utiliza !important para asegurar que el patrón temático de la marca 
+  prevalezca sobre las configuraciones del esquema de colores nativo de Shopify.
+*/
+body {
+    background-image: url("https://cdn.shopify.com/s/files/1/0751/1015/4340/files/fondo_solo.png?v=1771429806") !important;
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+}
+
+/* 2. TRANSPARENCIA DE CAPAS SUPERIORES:
+  Para que el fondo del 'body' sea visible, es necesario eliminar los colores de fondo
+  sólidos de los contenedores principales (Hero, Banners). 
+  Esto crea un efecto de profundidad y cohesión visual en toda la navegación.
+*/
+.banner,
+.hero,
+.image-banner {
+    background-image: none !important;
+    background-color: transparent !important;
+}
+
+/* 3. OPTIMIZACIÓN DE UI EN NAVEGACIÓN:
+  Ajuste de tipografía en el menú para mejorar la legibilidad y dar un aspecto 
+  más robusto y premium, acorde a productos de importación japonesa.
+*/
+.menu-list__link-title {
+    font-size: 20px;
+    font-weight: 550;
+    /* Peso intermedio para destacar sin saturar */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
